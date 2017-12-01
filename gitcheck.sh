@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# I found this a while ago on some website.  Original author commets preserved below.
+# It has been modified from the original I found so it is less verbose.
+# Christopher Gahlon
+
 ## gitcheck:
 ##   Check all git repositories in subdirectories, and list the ones with changes
 ##   30/07/2011, AstroFloyd, bzrcheck
@@ -24,7 +28,6 @@ do
     
     # If there are changes, print some status and branch info of this repo:
     git status -s | grep -v '??' &> /dev/null && {
-    #echo -e "\n\n \E[1;31m ${dir}\E[0m"
     echo -e "\n\n ${dir}"
     git branch -vvra
     git status -s | grep -v '??'
